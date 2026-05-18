@@ -1,6 +1,6 @@
 # Fintech Prep
 
-Finally got a job in AI, and the company operates in the fintech space. This repository is where I’ll be exploring, understanding, and implementing ideas at the intersection of AI and fintech.
+Finally got a job in AI!!!! The company operates in the fintech space. This repository is where I’ll be exploring, understanding, and implementing ideas at the intersection of AI and fintech.
 
 The goal is to build practical knowledge before I officially join, so I can hit the ground running, inshallah.
 
