@@ -10,7 +10,7 @@ Topics I plan to explore include:
 - Risk modeling and forecasting
 - LLM applications in fintech
 - Fraud detection **DONE**
---> *fintech-prep.ipynb*
+--> *fraud_detection.ipynb*
 - Retrieval and search systems
 - AI agents and automation workflows
 - Quantitative analysis tools
