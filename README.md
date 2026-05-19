@@ -8,6 +8,7 @@ Topics I plan to explore include:
 
 - Financial data processing
 - Risk modeling and forecasting
+--> Forecasting: *time_series_data.ipynb* 
 - LLM applications in fintech
 - Fraud detection **DONE**
 --> *fraud_detection.ipynb*
