@@ -1,0 +1,25 @@
+# Secrets & Configurations (Never commit actual credentials)
+.env
+.env.*
+
+# Python Virtual Environments
+venv/
+
+# Python Cache & Compiled files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local Databases & Logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
