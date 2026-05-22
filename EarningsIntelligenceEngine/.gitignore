@@ -17,6 +17,7 @@ __pycache__/
 *.sqlite
 *.sqlite3
 *.log
+data/
 
 # System & IDE files
 .DS_Store
