@@ -16,11 +16,13 @@ Topics I plan to explore include:
 - Quantitative analysis tools
 - Compliance and explainability considerations
 
-## Academic papers read & recommended:
+## Academic papers/ courses read/ taken & recommended:
 - Sycophancy in Large Language Models: Causes and Mitigations
 https://arxiv.org/abs/2411.15287
 - A Survey on Evaluation of Large Language Models
 https://arxiv.org/abs/2307.03109
+- Corporate Finance Fundamentals by CFI (cool but intermediate, would've taken something more basic so concpets are intuitive to digest here)
+Cert: https://www.datacamp.com/completed/statement-of-accomplishment/course/536454dbdd39c37bedfe50b829e408992d7aac12?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa
 
 This repo will contain notes, experiments, prototypes, and small projects as I learn along the way.
 
