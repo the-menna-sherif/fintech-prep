@@ -16,11 +16,13 @@ Topics I plan to explore include:
 - Quantitative analysis tools
 - Compliance and explainability considerations
 
-## Academic papers/ courses read/ taken & recommended:
+## Academic papers, articles and courses read, taken & recommended:
 - Sycophancy in Large Language Models: Causes and Mitigations
 https://arxiv.org/abs/2411.15287
 - Corporate Finance Fundamentals by CFI (cool but intermediate, should've taken something more basic, so concepts are intuitive to digest here)
 Cert: https://www.datacamp.com/completed/statement-of-accomplishment/course/536454dbdd39c37bedfe50b829e408992d7aac12?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa
+- SOTA:
+https://huggingface.co/blog/daya-shankar/sota-ai-models
 
 ## LLM Evaluation:
 *In progress*
