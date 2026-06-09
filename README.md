@@ -32,7 +32,8 @@ https://arxiv.org/abs/2307.03109
 https://www.youtube.com/watch?v=8fNP4N46RRo
 - METEOR:
 https://medium.com/on-being-ai/what-is-meteor-metric-for-evaluation-of-translation-with-explicit-ordering-45b49ac5ec70
-
+- LLM Evaluation metrics:
+https://avinashselvam.medium.com/llm-evaluation-metrics-bleu-rogue-and-meteor-explained-a5d2b129e87f
 
 This repo will contain notes, experiments, prototypes, and small projects as I learn along the way.
 
