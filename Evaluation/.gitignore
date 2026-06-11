@@ -1,0 +1,24 @@
+# Environments / Secrets
+.env
+.env.local
+.env.*.local
+
+# Vector Database (ChromaDB)
+chroma/
+chromadb/
+.chroma/
+
+# Data / Corpus Directories
+/corpus/
+corpus/
+
+# Python / Machine Learning specific exclusions
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+
+# System Files
+.DS_Store
+Thumbs.db
