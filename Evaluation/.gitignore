@@ -7,6 +7,8 @@
 chroma/
 chromadb/
 .chroma/
+**/*.sqlite3*
+**/*.bin
 
 # Data / Corpus Directories
 /corpus/
