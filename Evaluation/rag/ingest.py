@@ -1,14 +1,16 @@
 import os
 from pathlib import Path
 from time import time
+from dotenv import load_dotenv
 import chromadb
 import google.generativeai as genai
+
+load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 from pypdf import PdfReader
 
 CHUNK_SIZE = 500       # tokens approx
 CHUNK_OVERLAP = 50
-
 
 # fxn to load documents, checks file type then extracts text (pdf, md, etc.)
 # returns list of dicts with source and text for each doc
