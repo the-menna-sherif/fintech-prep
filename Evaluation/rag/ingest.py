@@ -1,16 +1,12 @@
 import os
 from pathlib import Path
-from time import time
-from dotenv import load_dotenv
 import chromadb
-import google.generativeai as genai
-
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+from sentence_transformers import SentenceTransformer
 from pypdf import PdfReader
 
 CHUNK_SIZE = 500       # tokens approx
 CHUNK_OVERLAP = 50
+
 
 # fxn to load documents, checks file type then extracts text (pdf, md, etc.)
 # returns list of dicts with source and text for each doc
@@ -40,25 +36,16 @@ def chunk_text(text: str, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
 # main ingestion fxn to load docs, chunk, embed, and store in ChromaDB
 # returns nothing but prints total chunks ingested at the end
 def ingest(corpus_dir="corpus/"):
-    chroma_client = chromadb.PersistentClient(path="./chroma_db")
-    collection = chroma_client.get_or_create_collection("banking_policies")
+    model = SentenceTransformer("all-MiniLM-L6-v2") # embedding model for vector reps of text chunks
+    client = chromadb.PersistentClient(path="./chroma_db")
+    collection = client.get_or_create_collection("banking_policies")
 
-    docs = load_documents(corpus_dir)
+    docs = load_documents(corpus_dir) # grab dicts of source and text for each doc in corpus from fxn
     for doc in docs:
-        chunks = chunk_text(doc["text"])
-        
-        # embed each chunk individually (Google API is per-call, not batched)
-        embeddings = []
-        for chunk in chunks:
-            result = genai.embed_content(
-                model="models/embedding-001",
-                content=chunk,
-                task_type="retrieval_document"
-            )
-            embeddings.append(result["embedding"])
-            time.sleep(0.5)  # avoid rate limiting on free tier
-        
+        chunks = chunk_text(doc["text"]) # pass text to chunking fxn to get list of text chunks for each doc
+        embeddings = model.encode(chunks).tolist() # get vector embeddings for each chunk using the sentence transformer model, convert to list for ChromaDB
         ids = [f"{doc['source']}_{i}" for i in range(len(chunks))]
+        # data saved for each source: chunk text, embedding vector, unique id, and metadata with source filename for traceability
         collection.add(
             documents=chunks,
             embeddings=embeddings,
